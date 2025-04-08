@@ -18,7 +18,7 @@ public class AndroidConnector : PlatformConnector
     private static readonly HashSet<string> IpConnectionsSuffixes
         = new(StringComparer.OrdinalIgnoreCase) { "local", "local/" };
 
-    protected override Type DefaultCapture => typeof(IpCameraCapture);
+    protected override Type DefaultCapture => typeof(OpenCvCapture);
 
     public AndroidConnector(string url, ILogger logger, ILocalSettingsService settingsService) : base(url, logger, settingsService)
     {
